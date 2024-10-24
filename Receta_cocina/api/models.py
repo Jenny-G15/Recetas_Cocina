@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class Recetas(models.Model):
     Nombre_Receta = models.CharField(max_length=100)
