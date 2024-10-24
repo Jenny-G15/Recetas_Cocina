@@ -18,7 +18,7 @@ class Preparacion(models.Model):
         return f" Instruccion: {self.Instrucciones}, porcion: {self.Porciones}, tiempo: {self.tiempo_coccion}" 
 
 class Proveedor(models.Model):
-    Nombre_Proveedor= models.CharField(max_length=100)
+    Nombre_Proveedor= models.CharField(max_length=100, unique=True)
     Correo= models.CharField(max_length=100)
    
     def __str__(self):

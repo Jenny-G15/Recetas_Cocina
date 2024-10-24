@@ -1,16 +1,7 @@
 from rest_framework import generics
-from .models import Recetas 
-from .models import RecetaIngre 
-from .models import Ingredientes
-from .models import Categoria 
-from .models import Preparacion 
-from .models import Proveedor
-from .serializers import RecetasSerializer
-from .serializers import RecetaIngreSerializer 
-from .serializers import IngredientesSerializer 
-from .serializers import CategoriaSerializer
-from .serializers import PreparacionSerializer 
-from .serializers import ProveedorSerializer
+from .models import Recetas, RecetaIngre, Ingredientes, Categoria, Preparacion, Proveedor
+from .serializers import RecetasSerializer, RecetaIngreSerializer, IngredientesSerializer, CategoriaSerializer
+from .serializers import PreparacionSerializer, ProveedorSerializer
 
 # Recetas
 class RecetasListCreate(generics.ListCreateAPIView):
