@@ -11,6 +11,11 @@ class RecetasSerializer(serializers.ModelSerializer):
         model = Recetas
         fields = '__all__'
         
+    def validate(self, data):
+            if data['Nombre' and 'Categoria' and 'Preparacion'] is None:
+                raise serializers.ValidationError("El ingrediente debe tener un proveedor asociado.")
+            return data
+        
 class RecetaIngreSerializer(serializers.ModelSerializer):
     class Meta:
         model = RecetaIngre
