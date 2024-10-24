@@ -11,10 +11,10 @@ class RecetasSerializer(serializers.ModelSerializer):
         model = Recetas
         fields = '__all__'
         
-    def validate(self, data):
-            if data['Nombre' and 'Categoria' and 'Preparacion'] is None:
-                raise serializers.ValidationError("¡Error!, no pueden haber especios vacios.")
-            return data
+    def validate_Nombre_Receta(self, value):
+        if Recetas.objects.filter(Nombre_Receta=value).exists():
+            raise serializers.ValidationError("Ya existe una receta con este nombre.")
+        return value
         
 class RecetaIngreSerializer(serializers.ModelSerializer):
     class Meta:
