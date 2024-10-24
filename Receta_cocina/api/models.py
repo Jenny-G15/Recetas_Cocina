@@ -7,7 +7,7 @@ class Recetas(models.Model):
     Preparacion=models.ForeignKey(Preparacion, on_delete=models.CASCADE) 
 
     def __str__(self):
-        return (self.Nombre_Receta)-(self.Categoria)- (self.Preparacion)
+        return (self.Nombre_Receta)-(self.Categoria)-(self.Preparacion)
   
   ##tabla intermedia , conecta receta e ingrediente  
 class RecetaIngre(models.Model):
